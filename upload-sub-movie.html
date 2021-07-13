@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Poppins Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Stylesheet Linking -->
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Single Series | Bangla Subtitle</title>
+</head>
+<body class="w-screen overflow-x-hidden font-poppins text-gray-800">
+    <header class="header">
+        <!-- Navbar -->
+        <nav class="w-screen h-16 fixed top-0 left-0 bg-white shadow-lg z-20">
+            <!-- Desktop Layout -->
+            <div class="hidden lg:flex w-11/12 md:w-2/3 lg:w-10/12 2xl:w-2/3 h-full mx-auto justify-between items-center">
+                <!-- Left Section -->
+                <div class="flex items-center justify-start space-x-12">
+                    <!-- Logo -->
+                    <img class="h-8" src="assets/icons/logo.svg" alt="">
+                    <!-- Menu Icon -->
+                    <div class="cursor-pointer p-3 hover:bg-gray-200 rounded-md" id="menu-toggle">
+                        <span class="w-7 h-[3px] bg-black rounded-full block"></span>
+                        <span class="w-7 h-[3px] bg-black rounded-full block mt-1.5"></span>
+                        <span class="w-7 h-[3px] bg-black rounded-full block mt-1.5"></span>
+                    </div>
+                </div>
+                <!-- Search Bar -->
+                <div class="flex items-center w-1/2 mx-auto">
+                    <form action="" class="flex items-center w-full mx-auto">
+                        <input 
+                        type="text" 
+                        placeholder="Search for Movies and TV Series" 
+                        class="h-10 bg-gray-100 rounded-l-full w-full px-6">
+                        <button 
+                        type="submit"
+                        class="bg-gray-100 pr-5 h-10 rounded-r-full grid place-items-center">
+                            <img class="h-5" src="assets/icons/search.svg" alt="">
+                        </button>
+                    </form>
+                </div>
+                <!-- Right Section -->
+                <div class="flex items-center justify-between w-1/3 font-semibold">
+                    <button class="flex items-center justify-center space-x-3 py-2 px-5 hover:bg-gray-200 rounded-full">
+                        <img class="h-5" src="assets/icons/download.svg" alt="">
+                        <span>Download</span>
+                    </button>
+                    <button class="flex items-center justify-center space-x-3 py-2 px-5 hover:bg-gray-200 rounded-full">
+                        <img class="h-5" src="assets/icons/list.svg" alt="">
+                        <span>Browse</span>
+                    </button>
+                    <button class="flex items-center justify-center space-x-3 py-2 px-5 hover:bg-gray-200 rounded-full">
+                        <img class="h-5" src="assets/icons/login.svg" alt="">
+                        <span>Login</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Layout -->
+            <div class="w-11/12 h-full mx-auto lg:hidden flex justify-center items-center relative">
+                <!-- Logo -->
+                <img class="h-8" src="assets/icons/logo.svg" alt="">
+                <!-- Hamburger Menu -->
+                <div class="cursor-pointer p-3 hover:bg-gray-200 rounded-md absolute right-0" id="menu-toggle-phone">
+                    <span class="w-7 h-[2px] bg-black rounded-full block"></span>
+                    <span class="w-7 h-[2px] bg-black rounded-full block mt-1.5"></span>
+                    <span class="w-7 h-[2px] bg-black rounded-full block mt-1.5"></span>
+                </div>
+            </div>
+        </nav>
+        <!-- Expanded Navbar Section (Must be included in Header Partial) -->
+        <div id="expanded-nav" class="w-screen h-screen fixed top-0 left-0 bg-gray-50 z-30 translate-y-[-500%] transition-transform duration-500 shadow-lg">
+            <!-- Expanded Navbar Contents (For Desktop) -->
+            <div class="w-10/12 xl:w-2/3 mx-auto mt-10">
+                <div class="w-full flex justify-end">
+                    <div id="nav-close-btn" class="w-12 h-12 grid place-items-center rounded-full bg-red-500 hover:bg-red-600 cursor-pointer">
+                        <img class="w-5 h-5" src="assets/icons/x.svg" alt="">
+                    </div>
+                </div>
+                <!-- Search Bar for Expanded Nav -->
+                <form action="" class="flex items-center w-full xl:w-2/3 2xl:w-1/2 mx-auto mt-10">
+                    <input 
+                    type="text" 
+                    placeholder="Search for Movies and TV Series" 
+                    class="h-12 bg-gray-100 rounded-l-full w-full px-6">
+                    <button 
+                    type="submit"
+                    class="bg-gray-100 pr-5 h-12 rounded-r-full grid place-items-center">
+                        <img class="h-5" src="assets/icons/search.svg" alt="">
+                    </button>
+                </form>
+                <div class="mx-auto flex justify-between lg:justify-around items-start mt-10">
+                    <!-- Movies Section -->
+                    <div>
+                        <div class="flex items-center">
+                            <img class="w-5" src="assets/icons/movie.svg" alt="">
+                            <h1 class="text-2xl font-extrabold ml-3">Movies</h1>
+                        </div>
+                        <ul class="mt-4 text-xl font-medium space-y-2">
+                            <li>Action</li>
+                            <li>Comedy</li>
+                            <li>Horror</li>
+                            <li>Romance</li>
+                            <li>Mystery</li>
+                            <li>Adventure</li>
+                            <li>Animals</li>
+                            <li>Animation</li>
+                        </ul>
+                    </div>
+                    <!-- TV Shows Section -->
+                    <div>
+                        <div class="flex items-center">
+                            <img class="w-5" src="assets/icons/tv.svg" alt="">
+                            <h1 class="text-2xl font-extrabold ml-3">TV Shows</h1>
+                        </div>
+                        <ul class="mt-4 text-xl font-medium space-y-2">
+                            <li>Action</li>
+                            <li>Comedy</li>
+                            <li>Horror</li>
+                            <li>Romance</li>
+                            <li>Mystery</li>
+                            <li>Adventure</li>
+                            <li>Animals</li>
+                            <li>Animation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="w-11/12 md:w-2/3 lg:w-10/12 2xl:w-2/3 mx-auto my-24 z-10">
+        <!-- Upload Heading -->
+        <h1 class="text-3xl font-bold text-center lg:text-left">Upload Subtitle</h1>
+        <!-- Upload Form -->
+        <div class="items-center justify-between w-full mx-auto flex flex-col lg:flex-row lg:items-start ">
+            <form class="mt-8 w-10/12 lg:w-1/2" action="">
+                <input type="file" name="subtitle" id="subttitle">
+                <h2 class="mt-4 text-lg font-bold">Release Name</h2>
+                <input type="text" name="release_name" class="mt-2 h-12 w-full px-4 border rounded focus:border-gray-300 focus:bg-white focus:shadow focus:outline-none">
+                <h2 class="mt-4 text-lg font-bold">Release Type</h2>
+                <select class="mt-2 w-1/2 rounded border h-12 px-4 focus:border-gray-300 focus:bg-white focus:shadow focus:outline-none" name="release_type" id="release_type">
+                    <option value="Don't know">Don't Know</option>
+                    <option value="DVDRip">DVDRip</option>
+                    <option value="BlurayRip">BluRay</option>
+                    <option value="CamRip">CamRip</option>
+                    <option value="WebRip">WebRip</option>
+                    <option value="HDCamRip">HDCamRip</option>
+                    <option value="TVRip">TVRip</option>
+                  </select>
+                <h2 class="mt-4 text-lg font-bold">Production Type</h2>
+                <select class="mt-2 w-1/2 rounded border h-12 px-4 focus:border-gray-300 focus:bg-white focus:shadow focus:outline-none" name="production_type">
+                    <option value="transcript">Transcript</option>
+                    <option value="translated">Translated</option>
+                    <option value="improved">Improved</option>
+                    <option value="machine_translated">Machine translated</option>
+                </select>
+                <h2 class="mt-4 text-lg font-bold">Movie Name : The Good, The Bad, The Ugly</h2>
+                <h2 class="mt-4 text-lg font-bold">Select Framerate</h2>
+                <select class="mt-2 w-1/2 rounded border h-12 px-4 focus:border-gray-300 focus:bg-white focus:shadow focus:outline-none" name="frame_rate">
+                    <option value="2">23.976</option>
+                    <option value="6">23.980</option>
+                    <option value="5">24.000</option>
+                    <option value="3">25.000</option>
+                    <option value="4">29.970</option>
+                    <option value="7">30.000</option>
+                </select>
+                <button class="mt-6 px-10 h-12 font-medium rounded-full bg-red-500 hover:bg-red-600 block text-white" type="submit">Submit Subtitle</button>
+            </form>
+            <!-- Poster Section -->
+            <div class="hidden lg:block w-1/5 mx-auto">
+                <img class="w-full" src="assets/img/poster.jpg" alt="">
+                <h1 class="mt-4 text-lg font-semibold text-center">Subtitles Available: 69</h1>
+            </div>
+        </div>
+    </main>
+    <!-- Footer (Use the entire Footer TAG as footer in template) -->
+    <footer class="w-screen bg-[#252425] pt-10">
+        <!-- Desktop Footer Options -->
+        <div class="w-11/12 lg:w-10/12 grid place-items-center grid-flow-row grid-cols-2 lg:flex lg:justify-between xl:justify-around items-start mx-auto">
+            <div class="flex flex-col items-center col-span-2">
+                <!-- Replace H1 with Logo Image -->
+                <h1 class="text-3xl font-extrabold uppercase text-white">Bangla Sub</h1>
+                <div class="flex items-center space-x-2 mt-4">
+                    <!-- Social Icons -->
+                    <div class="bg-white w-6 h-6 rounded-full grid place-items-center">
+                        <img class="w-3 h-3" src="assets/icons/fb.svg" alt="">
+                    </div>
+                    <div class="bg-white w-6 h-6 rounded-full grid place-items-center">
+                        <img class="w-3 h-3" src="assets/icons/instagram.svg" alt="">
+                    </div>
+                    <div class="bg-white w-6 h-6 rounded-full grid place-items-center">
+                        <img class="w-3 h-3" src="assets/icons/twitter.svg" alt="">
+                    </div>
+                    <div class="bg-white w-6 h-6 rounded-full grid place-items-center">
+                        <img class="w-3 h-3" src="assets/icons/youtube.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Section One -->
+            <div class="uppercase font-medium mt-5 lg:mt-0">
+                <h1 class="text-gray-400">Support</h1>
+                <ul class="mt-4 space-y-2 text-white">
+                    <li>Contact Us</li>
+                    <li>FAQ</li>
+                    <li>Downloads</li>
+                    <li>Section 1</li>
+                    <li>Section 2</li>
+                </ul>
+            </div>
+            <!-- Section Two -->
+            <div class="uppercase font-medium mt-5 lg:mt-0">
+                <h1 class="text-gray-400">About</h1>
+                <ul class="mt-4 space-y-2 text-white">
+                    <li>About Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Comment Policy</li>
+                    <li>Author Policy</li>
+                    <li>DMCA</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Subscribe Email Field -->
+        <div class="w-11/12 lg:w-10/12 mx-auto text-white mt-20 flex flex-col items-center">
+            <div class="flex items-center justify-center mx-auto">
+                <img class="w-5" src="assets/icons/email.svg" alt="">
+                <h1 class="ml-2">Stay up to date on the latest with BD Sub</h1>
+            </div>
+            <form class="flex flex-col items-center w-full lg:w-1/2 xl:w-1/3 mx-auto" action="">
+                <input type="email" name="email" 
+                placeholder="Enter your Email Address" 
+                class="w-full mx-auto border-b border-gray-600 px-4 mt-4 h-14 text-center bg-[#252425]">
+                <button type="submit" class="mt-4 w-40 h-12 bg-red-500 rounded-full hover:bg-red-600 text-white font-medium shadow">Subscribe</button>
+            </form>
+        </div>
+        <!-- Copyright Texts -->
+        <div class="w-screen bg-[#201c1c] py-3 px-10 mt-10 lg:flex justify-between text-center text-white">
+            <h1>Copyright 2021 | Bangla Subtitles</h1>
+            <h1>Powered By WiREBD Cloud</h1>
+        </div>
+    </footer>
+    <!-- Script Linking -->
+    <script>
+        // Selectors
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuTogglePhone = document.getElementById("menu-toggle-phone");
+        const expandedNav = document.getElementById("expanded-nav");
+        const navCloseBtn = document.getElementById("nav-close-btn");
+        // Event Listeners
+        menuToggle.addEventListener("click", () => {
+        expandedNav.classList.toggle("translate-y-[-500%]");
+        });
+        menuTogglePhone.addEventListener("click", () => {
+        expandedNav.classList.toggle("translate-y-[-500%]");
+        });
+        navCloseBtn.addEventListener("click", () => {
+        expandedNav.classList.add("translate-y-[-500%]");
+        });
+    </script>
+</body>
+</html>
